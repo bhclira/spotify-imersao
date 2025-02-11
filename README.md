@@ -5,6 +5,7 @@
 
 ![Preview](spotify-imersao\assets\preview-spotify.png)
 
+<img src="spotify-imersao/assets/preview-spotify.png" alt="Preview" width="400px" />
 Este repositório contém uma página simulacro do spotify App a partir de 5 dias de código e aprendizado junto à Imersão Dev Front-End da Alura.
 
 ## Funcionalidades / Functionalities
