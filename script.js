@@ -34,3 +34,5 @@ document.addEventListener('input', function() {
         resultArtist.classList.remove('hidden');
     }
 })
+
+

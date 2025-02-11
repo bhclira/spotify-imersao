@@ -36,7 +36,6 @@
     height: 32px;
     color: #121212;
     background-color: var(--bg-icon);
-    background: var(--bg-arrow-color);
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -147,11 +146,11 @@
     gap: 16px;
     margin-bottom: 16px;
   
-    /* CODIGO COM JS CALCULANDO OS CARDS POR COLUNA */
+    /* CODIGO COM JS CALCULANDO OS CARDS POR COLUNA 
     display: grid;
     gap: 16px;
     grid-gap: 32px;
-    margin: 0 auto;
+    margin: 0 auto;*/
   }
   
   .cards {
@@ -172,7 +171,7 @@
   
   
   
-  .offer__list-item img {
+  .offer__list-item cards img {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -225,10 +224,10 @@
   
   .artist-img {
     height: 100%;
+    width: 100%;
     left: 0;
     position: absolute;
     top: 0;
-    width: 100%;
     border-radius: 50%;
   }
   
@@ -292,4 +291,3 @@
     padding: 20px 40px;
   }
   /* FIM CARD ARTISTA */
-

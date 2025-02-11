@@ -1,17 +1,31 @@
-# Conversor de Moedas
+# Spotify
 
 
 <p>Tela de preview do App</p>
 
-![Preview](images/preview.png)
+![Preview](spotify-imersao\assets\preview-spotify.png)
 
-Este repositório contém um projeto de um conversor de moedas simples que permite converter valores em Real (R$) para Dólar (USD), Euro (EUR) e Bitcoin (BTC). A aplicação é responsiva e se adapta a diferentes tamanhos de tela, incluindo celulares, tablets e computadores.
+Este repositório contém uma página simulacro do spotify App a partir de 5 dias de código e aprendizado junto à Imersão Dev Front-End da Alura.
 
 ## Funcionalidades / Functionalities
 
-- Conversão de valores em Real (R$) para Dólar (USD), Euro (EUR) e Bitcoin (BTC).
+- Eu aprendi aqui a construção semântica de um Nav, Header e Footer e como você pode posicioná-los na tela;
 - Limpeza dos campos de entrada e do valor convertido.
 - Interface responsiva que se adapta a diferentes tamanhos de tela.
+
+## Instalação
+Para instalar as dependências necessárias, execute o seguinte comando:
+
+```
+npm install
+```
+    
+## Uso
+Para iniciar o projeto, use o seguinte comando:
+
+```
+npm start
+```
 
 ## Tecnologias Utilizadas / Tools
 
@@ -25,35 +39,39 @@ Este repositório contém um projeto de um conversor de moedas simples que permi
 
 O arquivo `index.html` contém a estrutura básica da página, incluindo os elementos de entrada, botões e áreas de exibição dos resultados.
 
-Exibe um container com:
-* título, subtítulo e um campo input do tipo número.
-*  No campo destinado ao usuário digitar o valor a ser convertido, eu usei um título e um atributo "placeholder" que se mostra para o usuário como uma legenda de exemplo dentro dele;
-*  Em cada botão "button" (um para cada moeda) usei o atributo "onclick" que invoca as funções respectivas de converter os valores digitados para as moedas de cada botão;
-*  Adidionei um botão extra  que contém uma função para resetar os campos de valor para os seus valores iniciais para caso o usuário quiser usar o programa mais de uma vez.
+Contém um Menu de navegação lateral com duas SECTIONs. Nele o usuário pode visualizar um botão inical e outro de buscar. O usuário pode também criar sua playlist ou acessar sua biblioteca num Section separada. Por fim, adicionei ao fim do container, um botão para alterar a linguagem do site.
+
+Cabeçalho com botão input para busca de títulos e artistas com um EventListener() cuja função espera o usuário digitar e toma uma pesquisa em tempo real, consome a API, retorna um JSON e percorre uma lista com o resultado e joga de volta no DOM do HTML e exibe no container principal os resultados da busca a partir do .value() fornecido pelo usuário;
+
+No container principal, o o site exibe um container com resultados. O número de colunas dos CARDS é definido de acordo com o tamanho de tela (media-query) sob o formato display: grid cujo formato eu ainda não conhecia e pude observar.
+
+Por fim temos um Foooter, ou rodapé, nele temos um background com degradê, nele existem 3 seções, sendo 1 botão de inscrição para o plano premium. 
   
 
 ### script.js
 
-O arquivo script.js contém as funções JavaScript para realizar as conversões de moeda e limpar os campos de entrada:
+Evento de Manipulação: Um evento input é adicionado ao documento. Isso significa que toda vez que o usuário digitar algo em um campo de entrada, a função associada será executada.
 
-* para cada função eu atribui um objeto document DOM a uma variável que foi responsável por pegar o valor ".value" do input fornecido pelo usuário na formulário HTML
-* De posse desse valor, cada função de moeda multiplica pela sua cotação estipulada para calcular o valor resultante;
-* Esse valor então é devolvido para o HTML no campo "valorConvertido" através da propriedade de objeto document.innerText;
+Busca e Comparação: Dentro da função do evento, o valor do campo de entrada (searchInput) é convertido para letras minúsculas e armazenado na variável searchTerm.
+
+Verificação do Termo de Busca: Se o searchTerm estiver vazio (ou seja, se o usuário não digitou nada), a classe hidden é adicionada ao elemento resultPlaylist, escondendo-o. Ao mesmo tempo, a classe hidden é removida do elemento resultArtist, tornando-o visível.
+
+Este código é parte de uma funcionalidade de busca onde, dependendo do termo de busca, diferentes resultados são exibidos ou escondidos.
 
 ### style.css
 
 O arquivo style.css contém os estilos para a página, incluindo a configuração de uma imagem de fundo, estilos para os elementos de entrada e botões, e media queries para tornar a aplicação responsiva:
 
-* Alinhei o conteiner vertical e horizontalmente
-* removi a margem padrão com margin:0;
-* Usei um background color com transparência no container para contrastar com a imagem de fundo;
-* Apliquei sombras e raios de borda;
+* Resetei as configurações iniciais de estilização fazendo um scaffold pelo Copilot e liguei no HTML;
+* Usei um background color com degradê no footer e aprendi nesse projeto a colocar  no container para contrastar com a imagem de fundo "background: linear-gradient";
+* Atribuí variávies para as fontes e cores padrão do projeto utilizadas e coloquei num arquivo var.css;
 * Estilizei os botões e acrescentei margens e paddings, aprendi a estilizar as bordas;
-* Pedi ao Co-Pilot para fazer os media-queries do projeto e implementei depois de testes usando a inspeção do navegador.
+* Pedi ao Co-Pilot para fazer os media-queries do projeto e implementei depois de testes usando a inspeção do navegador para diferentes displays.
+* apliquei displays diversos como flex e o grid e defini o número de colunas para a exibição dos resultados da busca conforme o tamanho da tela.
 
 ## Como contribuir / How Contribute
 
 ```bash
 # Clone the project
-$ git clone https://github.com/bhclira/conversor_moedas
+$ git clone https://github.com/bhclira/spotify-imersao/
 ```
